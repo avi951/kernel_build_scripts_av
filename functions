@@ -427,7 +427,7 @@ function build_kernel_deb_package() {
 		KDEB_PKGVERSION="${build_id}" \
 		KDEB_COMPRESS="xz" \
 		RK_KERNEL_DTS="${DEVICE_DTB_FILE}" \
-		LOCALVERSION="-${build_device_name}"
+	#	LOCALVERSION="-${build_device_name}"
 
 	deb_files=$(find "${KERNEL_DIR}" -maxdepth 1 -name "linux-*")
 
