@@ -426,8 +426,7 @@ function build_kernel_deb_package() {
 	make ${kernel_args} bindeb-pkg \
 		KDEB_PKGVERSION="${build_id}" \
 		KDEB_COMPRESS="xz" \
-		RK_KERNEL_DTS="${DEVICE_DTB_FILE}" \
-		LOCALVERSION="-${build_device_name}"
+		RK_KERNEL_DTS="${DEVICE_DTB_FILE}"
 
 	deb_files=$(find "${KERNEL_DIR}" -maxdepth 1 -name "linux-*")
 
